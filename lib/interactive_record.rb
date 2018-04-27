@@ -21,14 +21,10 @@ class InteractiveRecord
     column_names.compact
   end
 
-  self.column_names.each do |col_name|
-    binding.pry
-    attr_accessor col_name.to_sym
-  end
-
   def initialize(options={})
+    binding.pry
     options.each do |attribute, value|
-      #binding.pry
+
       self.send("#{attribute}=", value)
     end
   end
