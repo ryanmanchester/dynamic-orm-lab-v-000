@@ -22,6 +22,9 @@ class InteractiveRecord
   end
 
   def initialize(options={})
+    options.each do |attribute, value|
+      self.send("#{attribute}=", value)
+    end
   end
 
   def table_name_for_values
