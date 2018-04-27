@@ -29,7 +29,7 @@ end
 
     options.delete_if {|col| col == :id}.each do |attribute, value|
 
-      self.send("#{attribute}=", value)
+      self.send(("#{attribute}="), value)
     end
   end
 
