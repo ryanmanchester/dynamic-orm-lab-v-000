@@ -29,7 +29,7 @@ end
   def initialize(options={})
 
     options.delete_if {|col| col == :id}.each do |attribute, value|
-
+binding.pry
       self.send(("#{attribute}="), value)
     end
   end
