@@ -23,8 +23,8 @@ class InteractiveRecord
 
   def initialize(options={})
 
-    options.each do |attribute, value|
-binding.pry
+    options.delete_if {|col| col == :id}.each do |attribute, value|
+
       self.send("#{attribute}=", value)
     end
   end
