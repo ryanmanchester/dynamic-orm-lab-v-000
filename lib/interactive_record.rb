@@ -24,6 +24,8 @@ class InteractiveRecord
   def initialize(options={})
   end
 
-  
+  def table_name_for_values
+    self.class.table_name
+  end
 
 end
