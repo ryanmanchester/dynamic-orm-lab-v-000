@@ -23,7 +23,7 @@ class InteractiveRecord
 
   def initialize(options={})
     binding.pry
-    options.each do |attribute|
+    
   end
 
 end
