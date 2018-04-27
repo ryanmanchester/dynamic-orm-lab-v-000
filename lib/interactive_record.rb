@@ -56,7 +56,6 @@ class InteractiveRecord
 
   def self.find_by(attribute)
     sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.first[0].to_s} = '#{attribute.values.join}'"
-    #binding.pry
     DB[:conn].execute(sql)
   end
 
